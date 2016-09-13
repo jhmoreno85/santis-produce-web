@@ -1,0 +1,71 @@
+<section id="our-products">
+  <div class="row">
+    <div class="text-center col-sm-8 col-sm-offset-2">
+      <h2><span translate="title_ourproducts"></span></h2>
+      <hr>
+    </div>
+  </div>
+  <div class="our-product-container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img alt="avocados" src="app/shared/images/our-products/avocado-product.jpg" class="img-responsive">
+          <div class="caption">
+            <h3>{{ 'avocados_item_title' | translate }}</h3>
+            <p>{{ 'avocados_paragraph' | translate | subStringCustom: 220 }}</p>
+            <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalProd" (click)="setProduct('avocados')"><span translate="read_more_ourproducts"></span></button></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img alt="grapefruit" src="app/shared/images/our-products/grapefruit-product.jpg" class="img-responsive">
+          <div class="caption">
+            <h3>{{ 'grapefruits_item_title' | translate }}</h3>
+            <p>{{ 'grapefruits_paragraph' | translate | subStringCustom: 220 }}</p>
+            <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalProd" (click)="setProduct('grapefruits')"><span translate="read_more_ourproducts"></span></button></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img alt="limes" src="app/shared/images/our-products/limes-product.jpg" class="img-responsive">
+          <div class="caption">
+            <h3>{{ 'limes_item_title' | translate }}</h3>
+            <p >{{ 'limes_paragraph' | translate | subStringCustom: 220 }}</p>
+            <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalProd" (click)="setProduct('limes')"><span translate="read_more_ourproducts"></span></button></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img alt="mangoes" src="app/shared/images/our-products/mango-product.jpg" class="img-responsive">
+          <div class="caption">
+            <h3>{{ 'mangoes_item_title' | translate }}</h3>
+            <p>{{ 'mangoes_paragraph' | translate | subStringCustom: 220 }}</p>
+            <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalProd" (click)="setProduct('mangoes')"><span translate="read_more_ourproducts"></span></button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalProd" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content product-popup">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{ modalTitle }}</h4>
+        </div>
+        <div class="modal-body text-detail">
+          <p>{{ modalDescription }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><span translate="close_button_ourproducts"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

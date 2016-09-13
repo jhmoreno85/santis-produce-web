@@ -1,0 +1,29 @@
+<section id="team">
+  <div class="container">
+    <div class="row">
+      <div class="heading text-center col-sm-8 col-sm-offset-2">
+        <h2><span translate="title_team"></span></h2>
+        <hr>
+        <p><span translate="paragraph_team_1"></span></p>
+      </div>
+    </div>
+    <div class="team-members">
+      <div class="row">
+
+        <div class="col-sm-3" *ngFor="let member of teamList">
+          <div class="team-member">
+            <div class="member-image">
+              <img class="img-responsive" [src]="member.urlImage" alt="">
+            </div>
+            <div class="member-info">
+              <h3>{{ member.name }}</h3>
+              <h4><span translate="role_{{ member.role }}"></span></h4>
+              <p><i class="fa fa-envelope-o fa-fw"></i> {{ member.email }}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

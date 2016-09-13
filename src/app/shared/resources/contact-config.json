@@ -1,0 +1,14 @@
+{
+  "address": {
+    "street": "10601 S. Jackson Rd",
+    "city": "Pharr",
+    "state": "Tx",
+    "country": "USA",
+    "zipCode": "78577"
+  },
+  "phone1": "+1 (956) 316 4457",
+  "phone2": "+1 (956) 316 4458",
+  "email": "info@santisproduce.com",
+  "website": "www.santisproduce.com",
+  "urlServerContact": "https://formspree.io/info@santisproduce.com"
+}

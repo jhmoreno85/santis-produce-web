@@ -1,0 +1,81 @@
+<section><app-gmaps></app-gmaps></section>
+<section id="contact-us" class="parallax-contact">
+  <div class="container contact-container">
+    <div class="row">
+      <div class="heading text-center col-sm-8 col-sm-offset-2">
+        <h2><span translate="title_contact"></span></h2>
+        <hr>
+        <p><span translate="paragraph_contact_1"></span></p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div *ngIf="messageSent" class="alert alert-success">
+        <span translate="success_sent_contact"></span>
+      </div>
+      <div *ngIf="messageSentFail" class="alert alert-danger">
+        <span translate="err_sent_contact"></span>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 contact-form-container">
+          <form [ngFormModel]="form" (ngSubmit)="sendContactForm()">
+            <div class="form-group">
+              <div class="form-group">
+                <label><span translate="name_box_contact"></span>:</label>
+                <input [(ngModel)]="contactForm.name" #name="ngForm" ngControl="name" type="text" class="form-control name-input" id="nameForm">
+                <div *ngIf="nameErrMsg" class="alert alert-danger">
+                  <span translate="err_name_box_contact"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label><span translate="email_box_contact"></span>:</label>
+                  <input [(ngModel)]="contactForm.email" #email="ngForm" ngControl="email" type="text" class="form-control" id="emailForm">
+                  <div *ngIf="emailErrMsg" class="alert alert-danger">
+                    <span translate="err_email_box_contact"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label><span translate="phone_box_contact"></span>:</label>
+                  <input [(ngModel)]="contactForm.phone" #phone="ngForm" ngControl="phone" type="text" class="form-control" id="phoneForm">
+                  <div *ngIf="phoneErrMsg" class="alert alert-danger">
+                    <span translate="err_phone_box_contact"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><span translate="message_box_contact"></span>:</label>
+              <textarea [(ngModel)]="contactForm.message" #message="ngForm" ngControl="message" rows="2" class="form-control" id="messageForm"></textarea>
+              <div *ngIf="messageErrMsg" class="alert alert-danger">
+                <span translate="err_message_box_contact"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-default"><span translate="send_button_contact"></span></button>
+              <div class="preloader" *ngIf="preloader"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="contact-info">
+            <ul class="address">
+              <li><i class="fa fa-map-marker"></i> <span> <span translate="address_contact"></span>:</span> <i>{{contactConfig?.address?.street}} {{contactConfig?.address?.city}}, {{contactConfig?.address?.state}} {{contactConfig?.address?.zipCode}}</i></li>
+              <li><i class="fa fa-phone"></i> <span> <span translate="phone1_contact"></span>:</span> <i>{{contactConfig?.phone1}}</i> </li>
+              <li><i class="fa fa-phone"></i> <span> <span translate="phone2_contact"></span>:</span> <i>{{contactConfig?.phone2}}</i> </li>
+              <li><i class="fa fa-envelope"></i> <span> <span translate="email_contact"></span>:</span><a href="mailto:{{contactConfig?.email}}"><i><span class="email"> {{contactConfig?.email}}</span></i></a></li>
+              <li><i class="fa fa-globe"></i> <span> <span translate="website_contact"></span>:</span> <a href="http://{{contactConfig?.website}}"><i><span class="website"> {{contactConfig?.website}}</span></i></a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <img src="app/shared/images/Logo.png" width="300" height="150">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

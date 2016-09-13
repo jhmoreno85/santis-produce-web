@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sebastian Sánchez",
+    "role": "president",
+    "email": "sebastian@santisproduce.com",
+    "urlImage": "app/shared/images/team/1.png"
+  },
+  {
+    "name": "Jocelynne Sánchez",
+    "role": "administration",
+    "email": "jos.admin@santisproduce.com",
+    "urlImage": "app/shared/images/team/2.png"
+  },
+  {
+    "name": "Mario Cisneros",
+    "role": "sales",
+    "email": "mario.sales@santisproduce.com",
+    "urlImage": "app/shared/images/team/3.png"
+  },
+  {
+    "name": "Kevin Rico",
+    "role": "sales",
+    "email": "kevin.sales@santisproduce.com",
+    "urlImage": "app/shared/images/team/4.png"
+  }
+]
